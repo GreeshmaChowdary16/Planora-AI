@@ -1,195 +1,457 @@
 # 🚀 PlanoraAI
 
-PlanoraAI is a premium, high-fidelity project planner and engineering mentor designed to help students, developers, and makers map out and execute their technical ideas. Functioning as **two distinct workflows inside a single platform**, PlanoraAI caters to both software development teams and hardware/electronics engineering labs.
+### AI-Powered Student Project Planning & Engineering Assistant
+
+<p align="center">
+  <b>Transforming student ideas into structured Software & Hardware engineering blueprints using AI.</b>
+</p>
 
 ---
 
-### Technology Badges
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)
-![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript)
+## 🌟 About PlanoraAI
+
+**PlanoraAI** is a modern AI-powered full-stack platform that helps students convert raw project ideas into complete development roadmaps, architecture plans, hardware workflows, and implementation strategies.
+
+The platform works as an intelligent engineering mentor for:
+
+* 💻 Software Projects
+* ⚡ Hardware / IoT / Embedded Systems Projects
+
+Instead of generating generic suggestions, PlanoraAI provides:
+
+* ✅ AI-generated development roadmaps
+* ✅ Technology recommendations
+* ✅ Architecture guidance
+* ✅ Hardware component suggestions
+* ✅ Firmware recommendations
+* ✅ Research analysis
+* ✅ Development workflows
+* ✅ Deployment guidance
+* ✅ Interactive progress tracking
 
 ---
 
-## 📌 Project Overview
-PlanoraAI provides a workspace to break down complex project concepts into structured, AI-generated technical documentation. Leveraging advanced Large Language Models, the platform generates complete implementation plans, custom roadmaps, hardware Bill of Materials (BOM), circuit signal paths, firmware requirements, academic literature surveys, and deployment guides. 
+# 🌐 Live Demo
 
-With built-in progress tracking (optimistic state syncs) and a high-fidelity flowable PDF document exporter, PlanoraAI serves as a start-to-finish mentor for college evaluations, hackathons, and product prototypes.
+### Frontend
 
----
-
-## 🎨 Dual Workflows
-PlanoraAI separates software development and hardware engineering paradigms completely.
-
-### 🧡 1. Software Workflow (AI SaaS Project Planner)
-* **Visual Theme:** Vibrant Orange (`#F97316`) accents.
-* **Intelligent Recommendations:** Curates frontend/backend stacks, cloud architectures, database paradigms, and DevOps toolchains.
-* **Interactive SVG block maps:** Automatically diagrams nodes (clients, servers, databases, third-party APIs) and traces connection protocols.
-* **SaaS Terminology:** Focuses on APIs, scaling models, code-splitting, version control workflows (Git/GitHub), and deployment configurations.
-
-### 💙 2. Hardware Workflow (AI Electronics & IoT Engineering Mentor)
-* **Visual Theme:** High-tech Cyan (`#06B6D4`) PCB-inspired accents.
-* **Bill of Materials (BOM) & Budgeting:** Estimates component costs, lists required vs optional hardware, details component purposes, and suggests wiring roles.
-* **Firmware Stack Logic:** Suggests appropriate SDK libraries and configurations (e.g. C++/Arduino headers like `#include <WiFi.h>` or ESP32/Raspberry Pi environments).
-* **Circuit Flowcharting:** Generates orthogonal PCB-inspired circuit tracks with right-angled signal/telemetry paths.
-* **Required Tools Directory:** Lists physical lab equipment (Multimeters, Soldering irons, Logic analyzers) with curve stats.
-* **Safety Precautions:** Warns about voltage limits, logic shifts, AC insulation, and short circuits.
-
----
-
-## ⚙️ Core System Features
-* **AI Project Planner Wizard:** Guided wizard for project titles, target budgets, timelines, and technical paradigms.
-* **Real-time Synchronization:** Shared React Context updates checkbox states, sidebar progress rings, and dashboard scoreboard cards instantly with optimistic UI rendering and backend fallbacks.
-* **Interactive Architecture flowcharts:** Direct SVG rendering of system components with right-angled paths for PCB flows.
-* **Academic Survey Comparison:** Prior art literature references list with limitation/advantage matrices and paper viva topics.
-* **High-Fidelity Flowable PDF Exporter:** Generates print-ready vector PDF blueprints using `html2pdf.js`, automatically paginating sheets and applying high-contrast `pdf-mode` styles.
-
----
-
-## 🛠️ Technology Stack
-* **Frontend:**
-  - React 19 (Functional Hooks & Refs)
-  - TypeScript (Strict compilation checks)
-  - TailwindCSS (Premium dark-mode and light-theme contrast systems)
-  - Framer Motion (Smooth micro-animations & transitions)
-  - html2pdf.js (Vector PDF rendering)
-* **Backend:**
-  - Node.js & Express (TypeScript server)
-  - MongoDB & Mongoose (NoSQL storage, schemas, validation)
-  - JWT (JSON Web Tokens auth system)
-  - Groq SDK (High-speed Llama-3 AI code & blueprint generation)
-
----
-
-## 📷 Screenshots
-*Screenshots will be located inside the `/screenshots` folder.*
-
-1. **User Authentication & Login**
-   ![Login Page](screenshots/login_page.png)
-2. **Student Dashboard & Project Status Board**
-   ![Dashboard](screenshots/dashboard.png)
-3. **Software SaaS Planner Workspace (Orange Theme)**
-   ![Software Workflow](screenshots/software_workflow.png)
-4. **Hardware & IoT Engineering Workspace (Cyan Theme)**
-   ![Hardware Workflow](screenshots/hardware_workflow.png)
-5. **Interactive System Architecture Map**
-   ![Architecture Diagram](screenshots/architecture_diagram.png)
-6. **AI Roadmap Checklist & PDF Blueprint Export**
-   ![AI Roadmap](screenshots/ai_roadmap.png)
-
----
-
-## 🚀 Local Installation & Setup
-
-### Prerequisites
-* [Node.js](https://nodejs.org) (v18+ recommended)
-* [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) account (or local MongoDB server)
-* [Groq API Key](https://console.groq.com)
-
----
-
-### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/GreeshmaChowdary16/Planora-AI.git
-cd Planora-AI
+https://your-frontend-url.onrender.com
 ```
 
-### Step 2: Backend Setup
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Configure environment variables. Create a `.env` file based on the example:
-   ```bash
-   cp .env.example .env
-   ```
-   Edit `.env` and fill in your credentials:
-   ```env
-   PORT=5000
-   MONGODB_URI=your_mongodb_atlas_connection_string
-   JWT_SECRET=your_jwt_signing_secret
-   GROQ_API_KEY=your_groq_api_token
-   ```
-4. Build the TypeScript server:
-   ```bash
-   npm run build
-   ```
-5. Launch the backend:
-   - For development (with hot-reload):
-     ```bash
-     npm run dev
-     ```
-   - For production startup:
-     ```bash
-     npm run start
-     ```
+### Backend API
+
+```bash
+https://your-backend-url.onrender.com
+```
 
 ---
 
-### Step 3: Frontend Setup
-1. Navigate to the frontend directory:
-   ```bash
-   cd ../frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Configure environment variables. Create a `.env` file based on the example:
-   ```bash
-   cp .env.example .env
-   ```
-   Edit `.env` and specify your API backend endpoint:
-   ```env
-   VITE_API_BASE_URL=http://localhost:5000/api
-   ```
-4. Build the production bundle:
-   ```bash
-   npm run build
-   ```
-5. Launch the local development server:
-   ```bash
-   npm run dev
-   ```
-6. Open your browser and navigate to the local URL (typically `http://localhost:5173`).
+# ✨ Core Features
+
+## 💻 Software Project Workflow
+
+PlanoraAI helps students build modern software applications using AI-guided engineering workflows.
+
+### Features
+
+* AI-generated development roadmaps
+* Frontend & backend stack recommendations
+* Database architecture suggestions
+* Deployment guidance
+* Development tool recommendations
+* Architecture flow diagrams
+* Project uniqueness analysis
+* Interactive roadmap checklist tracking
+
+### 🔥 Example Tech Recommendations
+
+| Frontend | Backend    | Database   | Deployment |
+| -------- | ---------- | ---------- | ---------- |
+| React.js | Node.js    | MongoDB    | Render     |
+| Next.js  | Express.js | PostgreSQL | Vercel     |
+| Vue.js   | FastAPI    | Firebase   | Railway    |
 
 ---
 
-## 📡 Production Deployment Guide
+## ⚡ Hardware / IoT Engineering Workflow
 
-### Database (MongoDB Atlas)
-* Provision a free M0 tier cluster on MongoDB Atlas.
-* Whitelist IP access rules (or allow access from anywhere `0.0.0.0/0` for cloud platform nodes).
-* Copy the connection string and configure `MONGODB_URI` on your hosting server.
+PlanoraAI includes a dedicated **Hardware Engineering Mentor System** for Electronics, IoT, Robotics, and Embedded Systems projects.
 
-### Backend Hosting (Render)
-* Create a new Web Service on Render, linking your repository.
-* Set the Root Directory to `backend`.
-* Configure Build Command: `npm install && npm run build`.
-* Configure Start Command: `npm run start`.
-* Under environment variables, add `PORT`, `MONGODB_URI`, `JWT_SECRET`, and `GROQ_API_KEY`.
+### Hardware Features
 
-### Frontend Hosting (Vercel / Netlify / Render)
-* Create a new static site service, linking your repository.
-* Set the Root Directory to `frontend`.
-* Configure Build Command: `npm run build`.
-* Configure Output Directory: `dist`.
-* Add the environment variable `VITE_API_BASE_URL` pointing to your deployed backend domain (e.g. `https://your-backend-app.onrender.com/api`).
+* Electronics-focused roadmaps
+* Microcontroller recommendations
+* Firmware stack guidance
+* Sensor/module recommendations
+* Circuit flow diagrams
+* Bill of Materials (BOM)
+* Budget estimation
+* Safety notes
+* Embedded systems workflow guidance
+
+### 🔬 Supported Hardware Areas
+
+* IoT Systems
+* Smart Agriculture
+* Robotics
+* AI Embedded Systems
+* Smart Home Automation
+* Wearable Electronics
+* Industrial Monitoring
+* Smart Safety Systems
+
+### ⚙️ Example Hardware Recommendations
+
+* ESP32
+* Arduino UNO
+* Raspberry Pi
+* STM32
+* MQ Sensors
+* Ultrasonic Sensors
+* Relay Modules
+* Servo Motors
+* GSM Modules
 
 ---
 
-## 🔮 Future Improvements
-* **Auto-Procurement System:** Integration with online electronics APIs (e.g. Robu, Quartz, Mouser) to auto-fill shopping carts with BOM items.
-* **Firmware Playground:** A sandbox compiler inside the browser allowing students to check C++/Arduino code for syntax errors.
-* **PCB Schematic Exporter:** Auto-compiling layout configurations into KiCad-readable schematics.
-* **Team Collaboration Spaces:** Real-time multi-student planning syncs using WebSockets.
+# 🧠 AI Features
+
+PlanoraAI integrates AI-powered project generation using:
+
+* 🚀 Groq AI
+* 🦙 Llama 3.3 70B Versatile
+
+The AI dynamically generates:
+
+* Project roadmaps
+* Tech stack recommendations
+* Firmware suggestions
+* Research insights
+* Component suggestions
+* Architecture diagrams
+* Development phases
 
 ---
 
-## 📜 License
-This project is licensed under the [MIT License](LICENSE).
+# 🎨 UI / UX Highlights
+
+The platform follows a premium futuristic startup-inspired design inspired by:
+
+* Linear
+* Vercel
+* Framer
+* Notion AI
+
+### ✨ Design Features
+
+* Modern Glassmorphism UI
+* Dark / Light Theme
+* Orange AI SaaS Theme
+* Cyan Hardware Engineering Theme
+* Smooth animations
+* Responsive layouts
+* SVG architecture diagrams
+* Animated progress tracking
+
+---
+
+# 🛠️ Tech Stack
+
+## 💻 Frontend
+
+* React.js
+* TypeScript
+* Tailwind CSS
+* Vite
+* Framer Motion
+
+---
+
+## ⚙️ Backend
+
+* Node.js
+* Express.js
+* TypeScript
+* JWT Authentication
+* REST APIs
+
+---
+
+## 🗄️ Database
+
+* MongoDB Atlas
+* Mongoose ODM
+
+---
+
+## 🤖 AI Integration
+
+* Groq API
+* Llama 3.3 70B Versatile
+
+---
+
+# 📂 Project Structure
+
+```bash
+Planora-AI/
+│
+├── frontend/
+│   ├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── context/
+│   ├── services/
+│   └── utils/
+│
+├── backend/
+│   ├── src/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── services/
+│   └── config/
+│
+├── screenshots/
+├── README.md
+├── LICENSE
+└── .gitignore
+```
+
+---
+
+# 🔐 Authentication Features
+
+* JWT Authentication
+* Secure Login/Register
+* Password Hashing using bcryptjs
+* Protected Routes
+* Persistent Sessions
+
+---
+
+# 📊 Dashboard Features
+
+* Project History
+* Saved Projects
+* Pin / Unpin Projects
+* Interactive Progress Tracking
+* Roadmap Completion Sync
+* Real-time Updates
+
+---
+
+# 📄 Export Features
+
+* Markdown Export
+* PDF Export
+* Structured AI Reports
+
+---
+
+# 🌗 Theme System
+
+PlanoraAI includes:
+
+* ✅ Dark Theme
+* ✅ Light Theme
+* ✅ Smooth Theme Transitions
+* ✅ Theme Persistence using localStorage
+
+---
+
+# 🔥 AI Roadmap System
+
+## 💻 Software Projects
+
+Generated roadmaps include:
+
+* Planning
+* UI Design
+* Frontend Development
+* Backend Development
+* Database Integration
+* Authentication
+* API Integration
+* Testing
+* Deployment
+
+---
+
+## ⚡ Hardware Projects
+
+Generated workflows include:
+
+* Component Selection
+* Circuit Planning
+* Firmware Development
+* Sensor Calibration
+* PCB/Breadboard Setup
+* Testing
+* Integration
+* Safety Validation
+* Final Assembly
+
+---
+
+# 📱 Responsive Design
+
+Fully responsive support for:
+
+* Desktop
+* Tablet
+* Mobile Devices
+
+---
+
+# ⚙️ Installation & Setup
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/GreeshmaChowdary16/Planora-AI.git
+```
+
+---
+
+## 💻 Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## ⚙️ Backend Setup
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+---
+
+# 🔑 Environment Variables
+
+Create `.env` inside backend:
+
+```env
+PORT=5000
+
+MONGODB_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_secret_key
+
+GROQ_API_KEY=your_groq_api_key
+```
+
+---
+
+# ☁️ MongoDB Setup
+
+1. Create MongoDB Atlas account
+2. Create a free cluster
+3. Add IP Access:
+
+```bash
+0.0.0.0/0
+```
+
+4. Copy connection string
+5. Paste into `.env`
+
+---
+
+# 🤖 Groq API Setup
+
+1. Create Groq account
+2. Generate API key
+3. Add the key to `.env`
+
+---
+
+# 🚀 Deployment
+
+## Frontend
+
+* Render
+* Vercel
+
+## Backend
+
+* Render
+
+## Database
+
+* MongoDB Atlas
+
+---
+
+# 📸 Screenshots
+
+Add screenshots here:
+
+* Login Page
+* Dashboard
+* Software Workflow
+* Hardware Workflow
+* AI Roadmap
+* Architecture Diagram
+
+---
+
+# 🎯 Project Goals
+
+PlanoraAI aims to:
+
+* Simplify project planning for students
+* Improve beginner learning workflows
+* Provide AI-based technical mentorship
+* Help students complete projects efficiently
+* Bridge the gap between ideas and implementation
+
+---
+
+# 🚀 Future Improvements
+
+* AI Chat Assistant
+* Team Collaboration
+* PCB Designer Integration
+* AI Code Generator
+* Cloud Deployment Automation
+* Voice-based Project Input
+* AI Presentation Generator
+
+---
+
+# 📌 Current Status
+
+* ✅ Full-Stack Architecture Complete
+* ✅ AI Integration Complete
+* ✅ Software Workflow Complete
+* ✅ Hardware Workflow Complete
+* ✅ MongoDB Persistence Complete
+* ✅ JWT Authentication Complete
+* ✅ Responsive UI Complete
+* ✅ Theme System Complete
+* ✅ Dashboard System Complete
+* ✅ PDF Export Complete
+
+---
+
+# 👩‍💻 Developed By
+
+### Greeshma Chowdary
+
+---
+
+# ⭐ Final Note
+
+PlanoraAI is more than just a project planner.
+
+It is an AI-powered engineering mentor designed to help students build real-world software and hardware innovations with structured guidance, intelligent workflows, and modern development practices.
