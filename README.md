@@ -45,6 +45,11 @@ https://planoraai-frontend.onrender.com
 https://planoraai-backend.onrender.com
 ```
 
+### Live Application 
+```bash
+https://planoraai-frontend.onrender.com
+```
+
 ---
 
 # ✨ Core Features
