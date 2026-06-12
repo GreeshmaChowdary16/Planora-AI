@@ -36,13 +36,13 @@ Instead of generating generic suggestions, PlanoraAI provides:
 ### Frontend
 
 ```bash
-https://your-frontend-url.onrender.com
+https://planoraai-frontend.onrender.com
 ```
 
 ### Backend API
 
 ```bash
-https://your-backend-url.onrender.com
+https://planoraai-backend.onrender.com
 ```
 
 ---
