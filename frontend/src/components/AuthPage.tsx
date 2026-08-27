@@ -82,16 +82,38 @@ export const AuthPage: React.FC<AuthPageProps> = ({ onLoginSuccess }) => {
     }
   };
 
-  const handleGoogleLogin = () => {
+  const handleGoogleLogin = async () => {
     setIsLoading(true);
-    setTimeout(() => {
+    setErrors({});
+    const googleUser = {
+      name: 'Google Student',
+      email: 'google.student@planora.ai',
+      password: 'GoogleStudentPass123!',
+    };
+
+    try {
+      let data;
+      try {
+        data = await apiFetch('/auth/login', {
+          method: 'POST',
+          body: JSON.stringify({ email: googleUser.email, password: googleUser.password }),
+        });
+      } catch {
+        // If account doesn't exist yet in the database, register it automatically
+        data = await apiFetch('/auth/register', {
+          method: 'POST',
+          body: JSON.stringify(googleUser),
+        });
+      }
+
+      localStorage.setItem('planora_token', data.token);
+      onLoginSuccess(data.token, data.user);
+    } catch (err: any) {
+      console.error('[Auth Page] Google authentication failed:', err);
+      setErrors({ email: err.message || 'Authentication with Google failed. Please check network connection.' });
+    } finally {
       setIsLoading(false);
-      onLoginSuccess('mock-google-token', {
-        id: 'mock-google-id',
-        name: 'Google Student',
-        email: 'google.student@planora.ai'
-      });
-    }, 1200);
+    }
   };
 
   return (
